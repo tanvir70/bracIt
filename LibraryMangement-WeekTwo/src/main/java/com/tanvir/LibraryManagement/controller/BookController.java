@@ -15,13 +15,13 @@ import java.util.Map;
 
 
 @RestController
-@RequestMapping(value = "/library", produces = MediaType.APPLICATION_JSON_VALUE)
+@RequestMapping(value = "/library/books", produces = MediaType.APPLICATION_JSON_VALUE)
 public class BookController {
 
     @Autowired
     private LibraryService libraryService;
 
-    @PostMapping(value = "/add", consumes = MediaType.APPLICATION_JSON_VALUE)
+    @PostMapping(consumes = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<?> addBook(@RequestBody Book book) {
 
         Book addedBook = libraryService.addBook(book.getId(), book.getTitle(), book.getAuthor(), book.getPublicationYear(), book.getGenre());
@@ -31,7 +31,7 @@ public class BookController {
         return new ResponseEntity<>(response, HttpStatus.CREATED);
     }
 
-    @DeleteMapping("/delete")
+    @DeleteMapping()
     public ResponseEntity<?> deleteBook(@RequestParam(required = false) Integer id,
                                         @RequestParam(required = false) String title) {
         if (title == null && id == null) {
@@ -64,7 +64,7 @@ public class BookController {
         return new ResponseEntity<>(books, HttpStatus.OK);
     }
 
-    @GetMapping("/display")
+    @GetMapping("/all")
     public ResponseEntity<?> displayAllBooks() {
 
         List<Book> books = libraryService.displayAllBooks();
