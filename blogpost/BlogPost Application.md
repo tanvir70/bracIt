@@ -1,46 +1,13 @@
 # BlogPost Application
 
-This is a demo project for a BlogPost application built with Spring Boot, Maven, and PostgreSQL.
+This is a demo project for a BlogPost application built with Spring Boot, Maven, and PostgreSQL. It includes basic CRUD Operations and Junit testing with Mockito. 
 
 ## Table of Contents
 
-- [Requirements](#requirements)
-- [Installation](#installation)
-- [Usage](#usage)
+- [Tech Stack](#Tech_Stack)
 - [API Endpoints](#api-endpoints)
-- [License](#license)
 
-## Requirements
 
-- Java 23
-- Maven
-- PostgreSQL
-
-## Installation
-
-1. Clone the repository:
-    ```sh
-    git clone https://github.com/yourusername/blogpost.git
-    cd blogpost
-    ```
-
-2. Configure the PostgreSQL database:
-    - Create a database named `bps`.
-    - Update the database credentials in `src/main/resources/application.properties` if necessary.
-
-3. Build the project:
-    ```sh
-    mvn clean install
-    ```
-
-4. Run the application:
-    ```sh
-    mvn spring-boot:run
-    ```
-
-## Usage
-
-The application will be available at `http://localhost:8080`.
 
 ## API Endpoints
 
@@ -138,7 +105,3 @@ The application will be available at `http://localhost:8080`.
         "author": "Author Name"
     }
     ```
-
-## License
-
-This project is licensed under the MIT License.
