@@ -7,7 +7,10 @@ This is a demo project for a BlogPost application built with Spring Boot, Maven,
 - [Tech Stack](#Tech_Stack)
 - [API Endpoints](#api-endpoints)
 
-
+## Tech Stack
+- Java 23
+- Maven
+- PostgreSQL
 
 ## API Endpoints
 
